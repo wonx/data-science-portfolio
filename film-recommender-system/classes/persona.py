@@ -22,16 +22,16 @@ class Persona:
             return
 
         if title == "all":
-            print("\nTaula de classificació completa per afinitat")
+            print("\nWhole classification table by user affinity")
             #print(pd.DataFrame.from_dict(self.classification_table, orient='columns'))
-            print(pd.DataFrame(self.classification_table).sort_values(by='Distance', axis=0, ascending=False))
+            display(pd.DataFrame(self.classification_table).sort_values(by='Affinity', axis=0, ascending=False))
         elif title == "raw":
-            print("\nRaw classification table per a", self.get_name(), ":")
+            print("\nRaw classification table for", self.get_name(), ":")
             for z in range(len(self.classification_table)):
                 print(self.classification_table[z])
         else:
-            print("\nTaula de classificació per al film "+title+" per "+self.get_name())
-            print(pd.DataFrame(self.classification_table).reindex(columns=['Critic', 'Distance', title, title+"_corrected"]).sort_values(by='Distance', axis=0, ascending=False))
+            print("\nClassification table of "+title+" for "+self.get_name())
+            display(pd.DataFrame(self.classification_table).reindex(columns=['Critic', 'Affinity', title, title+"_corrected"]).sort_values(by='Affinity', axis=0, ascending=False))
 
     def get_affinity(self):
         import pandas as pd
@@ -39,5 +39,5 @@ class Persona:
             print("Classification table not yet generated for this person.")
             return
 
-        print("\nTaula d'afinitat per a "+self.get_name())
-        print(pd.DataFrame(self.classification_table).reindex(columns=['Critic', 'Distance']).sort_values(by='Distance', axis=0, ascending=False))
+        print("\nAffinity table for "+self.get_name())
+        display(pd.DataFrame(self.classification_table).reindex(columns=['Critic', 'Affinity']).sort_values(by='Affinity', axis=0, ascending=False))

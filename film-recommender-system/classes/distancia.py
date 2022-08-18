@@ -6,7 +6,7 @@ class Distancia(ABC): # Ha de ser una classe abstracta
        pass
    
     def __str__(self):
-        tmp = "La distància és: "+str(self.get_distance())
+        tmp = "The distance is: "+str(self.get_distance())
         return tmp
 
     def get_distance(self):
@@ -26,7 +26,7 @@ class Distancia(ABC): # Ha de ser una classe abstracta
 
 class DistanciaEuclidiana(Distancia):
     def __init__(self,p,q):
-        print('Constructor de la classe DistanciaEuclidiana')
+        print('DistanciaEuclidiana class constructor')
 
     # Rep dos arrays unidimensionals amb puntuacions, i calcula la distancia
     # euclidiana entre cadascun dels elements.
@@ -47,7 +47,7 @@ class DistanciaEuclidiana(Distancia):
 
 class DistanciaPearson(Distancia): # Utilitzar Numpy
     def __init__(self):
-        print('Constructor de la classe', self.__name__)
+        print('Class constructor ', self.__name__)
 
     def Dist(x,y):
         import numpy as np

@@ -1,12 +1,12 @@
 class Recommendation:
     def __init__(self, person, people, films, minrating=1.5): # person (object instance of Persona), people (list of all Persona objects), films (tuple with all film titles)
-        print("\nMòdul recomanació:")
+        print("\nRecommendation module:")
         from filmstats import mostseen, notseen, filmmeans
         self.__recommendation = {}
         self.__meanratings = {}
 
         # Controlar que la classificaation table existeixi
-        print(" ", person.get_name(), "no ha vist", notseen(person, films))
+        print(" ", person.get_name(), "has not seen", notseen(person, films))
         for title in films:
             self.__popularity = mostseen(people, films)[title]/len(people) # votes by the amount of people
             if title in notseen(person, films):
@@ -20,7 +20,7 @@ class Recommendation:
                     #print("Sí!")
 
     def __str__(self):
-        tmp = "Les pel·lícules recomanades són: ", self.get_recommendation()
+        tmp = "The recommended films are: ", self.get_recommendation()
         return tmp
 
     def get_recommendation(self):
@@ -29,7 +29,7 @@ class Recommendation:
     # Generates the rating classification table for each user (including corrected ratings)
     def classificationtable(person, people, films, distancetype="pearson"):
         import distancia as d
-        print("\nGenerant la taula de classificació de", person.get_name(), "...")
+        print("\nGenerating the classification table for", person.get_name(), "...")
         person.classification_table = []
 
         for j in range(0,len(people)):
@@ -46,7 +46,7 @@ class Recommendation:
                     return
 
                 classification['Critic'] = people[j].get_name() # Afegim clau 'critic' al diccionari
-                classification['Distance'] = round(dist,2)
+                classification['Affinity'] = round(dist,2)
 
                 for z in films: # Per cada peli..
                     correccio=round(people[j]._Persona__dic[z]*dist, 2)
@@ -55,5 +55,5 @@ class Recommendation:
                     
                 person.classification_table.append(classification)
 
-        print("...fet.")
+        print("...done.")
         return person.classification_table # list of dictionaries with mean film ratings

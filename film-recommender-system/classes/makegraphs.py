@@ -87,7 +87,7 @@ def input_graphs(df):
 	plt.ylabel("# people")
 	ax1 = fig.add_subplot(111)
 	ax1.bar(c, y)
-	plt.xticks(c, x, rotation=90)
+	plt.xticks(c, x, rotation=90) 
 	plt.savefig(path+"output/raw data/Popularity.png")
 
 
@@ -96,25 +96,22 @@ def intermediate_graphs(target, classification_table):
   y = []
   for i in range(0,len(classification_table)):
     x.append(classification_table[i]['Critic'])
-    y.append(classification_table[i]['Distance'])
-  plt.rcParams['figure.figsize'] = (20,5)
+    y.append(classification_table[i]['Affinity'])
+  plt.rcParams['figure.figsize'] = (20,5) 
   y, x = zip(*sorted(zip(y, x), reverse=True))
-  c = range(len(y))
-  fig = plt.figure()
+  plt.bar(x=x, height=y)
   plt.title("Affinity between "+target+" and the rest of users")
-  plt.ylabel("Distance")
-  ax2 = fig.add_subplot(111)
-  ax2.bar(c, y)
-  plt.xticks(c, x, rotation=90)
-  plt.savefig(path+"output/distances/Distàncies"+target+'.png')
+  plt.ylabel("Affinity")
+  plt.xticks(x, rotation=90)
+  plt.savefig(path+"output/distances/Distances"+target+'.png')
 
 
 def output_graphs(df, recommendation):
   plt.rcParams['figure.figsize'] = (6, 6)
-  labels = 'No vista', '1', '2', '3', '4', '5'
+  labels = 'Not seen', '1', '2', '3', '4', '5'
   df[recommendation].value_counts().plot.pie(subplots=True, labels=labels, autopct='%1.1f%%')
-  plt.title("Distribució de les puntuacions per al film "+recommendation)
-  plt.savefig(path+"output/detailed recommendations/"+"La recomanació és... "+recommendation+'!.png')
+  plt.title("Film rating distribution for "+recommendation)
+  plt.savefig(path+"output/detailed recommendations/"+"The recommendation is... "+recommendation+'!.png')
   
 def affinity_heatmap(people, films, distancealgorithm):
 	import pandas as pd
@@ -130,8 +127,8 @@ def affinity_heatmap(people, films, distancealgorithm):
 	for k in range(0,len(people)):
 	    # We generate the classification table for all users.
 	    people[k].classification_table = r.Recommendation.classificationtable(people[k], people, films, distancealgorithm)
-	    a = pd.DataFrame(people[k].classification_table).reindex(columns=['Critic', 'Distance'])
-	    a = a.rename(columns={"Distance": people[k].get_name()})
+	    a = pd.DataFrame(people[k].classification_table).reindex(columns=['Critic', 'Affinity'])
+	    a = a.rename(columns={"Affinity": people[k].get_name()})
 	    affinity = pd.merge(affinity, a, how="outer")
 	plt.rcParams['figure.figsize'] = (10, 10)
 	plt.matshow(affinity.corr())

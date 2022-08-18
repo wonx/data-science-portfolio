@@ -17,14 +17,14 @@ def store_recommended_film(target, recommendation):
 
   fullpath=path+"output/"
   # Global recommendation file
-  g = open(fullpath+"Recomanacions.txt", "a")
+  g = open(fullpath+"recommendations.txt", "a")
 
   # Creem una string amb els films recomanats, ordenats per puntuació, i separats per comes.
   filmlist=""
   filmlist+=', '.join('{0} ({1})'.format(key,val) for key,val in sorted(recommendation.items(), key=lambda x:x[1], reverse=True))
-  g.write("Films recomanats per a "+target+": "+filmlist+".\n")
+  g.write("Recommended films for "+target+": "+filmlist+".\n")
   g.close()
-  print("Fitxer "+fullpath+"Recomanacions.txt actualitzat amb les recomanacions per a "+target)
+  print("File "+fullpath+"recommendations.txt updated with recommendations for "+target)
 
 def store_personalized_films(target, recommendation):
   # Personalized recommendation file (in csv format)
@@ -35,4 +35,4 @@ def store_personalized_films(target, recommendation):
   for film in sorted(recommendation.items(), key=lambda x:x[1], reverse=True):
     f.write(film[0]+","+str(film[1])+"\n")
   f.close()
-  print("Creat fitxer "+fullpath+target+"_recommendations.csv")
+  print(fullpath+target+"_recommendations.csv file created")
