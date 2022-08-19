@@ -48,7 +48,7 @@ def input_graphs(df):
     
 	"""Plot graphs based on input"""
 
-	##mean of each film
+	## mean of each film
 	plt.figure()
 	matplotlib.style.use('ggplot')
 	plt.title("Mean rating for each film")
@@ -56,7 +56,7 @@ def input_graphs(df):
 	df.mean().sort_values(ascending=False).plot(kind='bar')
 	plt.savefig(path+"output/raw data/Mean ratings.png")
 
-	##detailed rating of each film
+	## detailed rating of each film
 	i = 0
 	plt.rcParams['figure.figsize'] = (6,2)
 	for column in df.columns[1:]:
@@ -79,15 +79,17 @@ def input_graphs(df):
 		x.append(column)
 		y.append(numOfRows)
 	y, x = zip(*sorted(zip(y, x), reverse=True))
-	c = range(len(y))
-	plt.rcParams['figure.figsize'] = (10,4)
+	plt.figure()
+	#c = range(len(y))
+	plt.rcParams['figure.figsize'] = (20,5)
 	#matplotlib.style.use('ggplot')
-	fig = plt.figure()
+	#fig = plt.figure()
+	plt.bar(x=x, height=y)
 	plt.title("Amount of people that has watched each film")
 	plt.ylabel("# people")
-	ax1 = fig.add_subplot(111)
-	ax1.bar(c, y)
-	plt.xticks(c, x, rotation=90) 
+	#ax1 = fig.add_subplot(111)
+	#ax1.bar(c, y)
+	plt.xticks(x, rotation=90) 
 	plt.savefig(path+"output/raw data/Popularity.png")
 
 
