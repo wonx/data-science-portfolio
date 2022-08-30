@@ -115,6 +115,26 @@ For instance, there is the function `mostseen()` that shows a list of the movies
 
 ### Recommendations
 
+Recommendations are obtained through the class `Recommendation` within the module `recommendation.py`.
+This class, to which we pass the referenced username, the list of `people` objects, and the minimum rating threshold for a recommendation, will create an object (stored in `c`) containing the recommendations. These recommendations are accessed through the `.get_recommendation()` method, which will return a dictionary with the movie title as the key, and its corrected rating for the username as the value.
+
+Internally, it checks which films have not been watched by the user (`notseen()` function), and using the mean of the corrected ratings for each user (`filmmeans()` function) for these films, a correction for popularity is applied (multiplying the viewing ration for each film (`mostseen()`) and checks if a particular film is over the rating threshold that we specified.
+
+For instance:
+
+> We use a `0.65` threshold (over a theoretical maximum value of 5). `notseen()` tells us that `Wonx` has not watched `Indiana Jones and the Temple of Doom (1984)`, `Rocky (1976)` or `Forest Gump (1994)`, among others. `Indiana Jones and the Temple of Doom (1984)` has a corrected rating of `1.35` (we can check that in its `classification_table`), and, since it's a movie seen by `79.41%` of the users, the popularity corrected rating will be `1.07`. Since it's over the `0.65` threshold, it will be recommended. However, `Forest Gump (1994)` has a popularity corrected rating of `0.49`, therefore it won't recommended to the user.
+
+Recommendations for user `Wonx`:
+|   | Rank | Title                                       | Rating | Rating (popularity-corrected) |
+|---|------|---------------------------------------------|--------|-------------------------------|
+| 0 | 1    | Indiana Jones and the Temple of Doom (1984) | 1.83   | 1.07                          |
+| 1 | 2    | Platoon (1986)                              | 1.52   | 0.84                          |
+| 2 | 3    | Goodfellas (1990)                           | 1.32   | 0.8                           |
+| 3 | 4    | Scarface (1983)                             | 1.29   | 0.76                          |
+| 4 | 5    | The Terminator (1984)                       | 1.14   | 0.75                          |
+| 5 | 6    | Rocky (1976)                                | 1.12   | 0.65                          |
+
+
 ### Plots
 
  - Affinity between users bar graph
