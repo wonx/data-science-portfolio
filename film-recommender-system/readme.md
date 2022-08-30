@@ -57,7 +57,7 @@ The Euclidean distance is the lengh of a line segment between two points (in thi
 
 It is a measure of the correlation between two datapoints. The result will be a value between 0 and 4 (the difference in the rating range, where people can vote from 1 to 5). Broadly speaking, since it is a unidimensional variable, the distance for each rating pair is calculated with the `np.sqrt(np.sum((p[i]-q[i])**2))` formula and these values are then averaged (with the help of `np.nanmean(distance)`.
 
-#### User affinity
+### User affinity
 
 Each object `persona` stores a `classification_table`, a list of dictionaries containing the rest of the users, their affinity, and the affinity-corrected rating (the product of the rating and the distance).
 
@@ -88,7 +88,7 @@ We can display the table by using the method `.get_classificationtable(title)`.
 
 **Note: There's a second correction, by popularity, that is is applied only when the recommendations are generated (explained in its own section).*
 
-#### Film statistics
+### Film statistics
 
 The module `filmstats.py` allows us to visualize some film statistics, although these functions are used internally in other functions and methods.
 
@@ -113,7 +113,7 @@ For instance, there is the function `mostseen()` that shows a list of the movies
 | 14 | Forrest Gump (1994)                         | 22/34   | 64.71      |   |
 | 15 | Rocky (1976)                                | 20/34   | 58.82      |   |
 
-#### Recommendations
+### Recommendations
 
 ### Plots
 
