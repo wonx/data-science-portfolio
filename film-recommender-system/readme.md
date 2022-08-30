@@ -137,8 +137,23 @@ Recommendations for user `Wonx`:
 
 ### Plots
 
- - Affinity between users bar graph
+A series of plots can be generated using the `makegraphs.py` class to visualize more clearly the obtained data.
 
- - Heatmap
+ - Film ratings
+  ![User affinity for user 'Wonx']( output/film_ratings.png)
+
+   ![User affinity for user 'Wonx']( output/film_popularity.png)
+
+ - Film popularity
+
+ - Recommendations
+    ![User affinity for user 'Wonx'](output/detailed%20recommendations/recommendations_corrected_scores.png)
+
+ - User affinity (bar graph)
+ ![User affinity for user 'Wonx'](output/distances/DistancesWonx.png)
+
+
+ - User affinity (heatmap)
+  ![User affinity for user 'Wonx'](output/distances/affinity_heatmap.png)
 
 ### Data output
