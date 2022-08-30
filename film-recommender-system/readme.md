@@ -3,14 +3,29 @@ This is an example of a recommender system, used to provide suggestions for item
 
 In this example, the recommender system is used to suggest movies to a particular user, based on the overall movie ratings and the taste of similar-minded users.
 
+Table of contents
+=================
+
+* [Files](#files)
+* [Data acquisition and preparation](#data-acquisition-and-preparation)
+* [Algorithms](#algorithms)
+  * [Euclidean distance](#euclidean-distance)
+  * [Pearson correlation](#pearson-correlation)
+* [User affinity](#user-affinity)
+* [Film statistics](#film-statistics)
+* [Recommendations](#recommendations)
+* [Plots](#plots)
+* [Data output](#data-output)
+
+
 ## Structure
 
 ### Files
 
-- [Main.ipynb](): starting point. Jupyter notebook encompassing the instructions to read the data, calculate the affinity between users, generate the recommendations, plot the graphs and produce output in csv and png format.
+- [Main.ipynb](Main.ipynb): starting point. Jupyter notebook encompassing the instructions to read the data, calculate the affinity between users, generate the recommendations, plot the graphs and produce output in csv and png format.
 
 - Classes:
-	- [filemanager.py](): module that includes the `read_input_file()`,  `store_recommended_film()`, `store_personalized_films()` functions, to read the data source, save the recommendations in a general file, or for a user in particular (in `csv` format), respectively.
+	- [filemanager.py](classes/filemanager.py): module that includes the `read_input_file()`,  `store_recommended_film()`, `store_personalized_films()` functions, to read the data source, save the recommendations in a general file, or for a user in particular (in `csv` format), respectively.
 
 	- [persona.py](): this module contains the `Persona` class, responsible for the creation of the `persona` objects that store all the user data, like the username, ratings, and the classification table. It also includes methods that return this information in an orderly manner.
 
@@ -105,3 +120,5 @@ For instance, there is the function `mostseen()` that shows a list of the movies
  - Affinity between users bar graph
 
  - Heatmap
+
+### Data output
