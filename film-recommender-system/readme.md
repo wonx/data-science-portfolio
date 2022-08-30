@@ -137,7 +137,7 @@ Recommendations for user `Wonx`:
 
 ### Plots
 
-A series of plots can be generated using the `makegraphs.py` class to visualize more clearly the obtained data.
+A series of plots can be generated using the `makegraphs.py` class (through `Matplotlib`) to visualize more clearly the obtained data. Here are some samples:
 
  - Film ratings
 
@@ -158,7 +158,9 @@ A series of plots can be generated using the `makegraphs.py` class to visualize 
 
 
  - User affinity (heatmap)
- 
+
   ![User affinity for user 'Wonx'](output/distances/affinity_heatmap.png)
 
 ### Data output
+
+Processed data in `Main.ipynb` is saved in the form of `csv` files and `.png` plots. These files will be placed in the `./output/` directory. For instance, a `csv` will be generated for the recommendations for the specified user (e.g. `Wonx_recommendations.csv`), a logfile (`recommendations.txt`) will keep track of all the recommendations generated with the program so far. All the plots generated in the program can also found in either the `./output/detailed_recommendations` (for film recommendations) or `./output/distances` (for user affinity) subfolders.
