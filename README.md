@@ -1,11 +1,12 @@
  # data-science-portfolio
 Portfolio of data science projects completed by me for academic, self learning, and hobby purposes.
 
-- [Film recommender system](film-recommender-system): example of a recommender system, used to provide suggestions for items that better a particular use and predict their preferences. In this example, the recommender system is used to suggest movies to a particular user, based on the overall movie ratings and the taste of similar-minded users.
+- [Film recommender system](film-recommender-system): example of a recommender system, used to provide suggestions for items that better a particular use and predict their preferences. In this example, the recommender system is used to suggest movies to a particular user, based on the overall movie ratings and the taste of similar-minded users. *Tools: Python, Pandas, NumPy, Matplotlib, Jupyter Notebook.*
 - [Data bootstrapping](data-bootstrapping): (chromosome length)
 
 - Machine learning:
-  - [Linear regression](ecommerce-linear-regression/Main.ipynb) (e-commerce dataset): example of the use of a linear regression model to predict sales based on numerical data on a simulated E-commerce setting. Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.
+  - [Linear regression](ecommerce-linear-regression/Main.ipynb) (e-commerce dataset): example of the use of a Linear Regression Model to predict sales based on numerical data on a simulated E-commerce setting. *Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.*
+  - [Logistic regression](advertising-logistic-regression/Main.ipynb) (advertising dataset): Using a Logistic Regression Model to predict whether or not a user would click on an ad based on a series of features related to how a user browsed the company website. *Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.*
   - [Binary category assignment]() (titanic dataset)
   - [Neural Network]() (lending club dataset)
 - [K-means clustering]() (chromosome length)
