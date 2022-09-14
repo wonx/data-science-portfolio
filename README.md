@@ -5,7 +5,7 @@ Portfolio of data science projects completed by me for academic, self learning, 
 - [Data bootstrapping](data-bootstrapping): (chromosome length)
 
 - Machine learning:
-  - [Linear regression](ecommerce-linear-regression/Main.ipynb) (e-commerce): example of the use of a linear regression model to predict sales based on numerical data on a simulated E-commerce setting. Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.
+  - [Linear regression](ecommerce-linear-regression/Main.ipynb) (e-commerce dataset): example of the use of a linear regression model to predict sales based on numerical data on a simulated E-commerce setting. Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.
   - [Binary category assignment]() (titanic dataset)
   - [Neural Network]() (lending club dataset)
 - [K-means clustering]() (chromosome length)
