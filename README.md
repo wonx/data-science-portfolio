@@ -10,4 +10,4 @@ Portfolio of data science projects completed by me for academic, self-learning, 
   - [K-Nearest-Neighbors](KNearestNeighbors-project/Main.ipynb) (KNN-project-data dataset): Using the K-Nearest-Neighbors algorithm, we create a model to predict a binary categorical variable based on a series of numerical features. *Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.*
   - [Binary category assignment]() (titanic dataset)
   - [Neural Network]() (lending club dataset)
-- [K-means clustering]() (chromosome length)
+- [K-means clustering]() (chromosome size - k-means clustering/Main.ipynb)
