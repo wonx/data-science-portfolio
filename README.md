@@ -9,4 +9,4 @@ Portfolio of data science projects completed by me for academic, self-learning, 
   - [Linear regression](ecommerce-linear-regression/Main.ipynb) (e-commerce dataset): Example of the use of a Linear Regression Model to predict sales based on numerical data on a simulated E-commerce setting. *Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.*
   - [Logistic regression](advertising-logistic-regression/Main.ipynb) (advertising dataset): Using a Logistic Regression Model to predict whether or not a user would click on an ad based on a series of features related to how a user browsed the company website. *Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.*
   - [K-Nearest-Neighbors](KNearestNeighbors-project/Main.ipynb) (KNN-project-data dataset): Using the K-Nearest-Neighbors algorithm, we create a model to predict a binary categorical variable based on a series of cryptic numerical features. *Tools: Python, Pandas, SeaBorn, NumPy, Sklearn and Jupyter Notebook.*
-  - [Random Forest Classifier]() (lendingclub-randomforest) (lending club dataset): 
+  - [Random Forest Classifier](lendingclub-randomforest) (lending club dataset): 
