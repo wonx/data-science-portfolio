@@ -1,5 +1,5 @@
 # Film recommender system
-[![View Jupyter Notebook](Main.ipynb)
+[![View Jupyter Notebook](https://img.shields.io/badge/view-Jupyter%20notebook-orange.svg)](Main.ipynb)
 
 This is an example of a recommender system, used to provide suggestions for items that better a particular use and predict their preferences. Similar systems can be found in online stores, used to display articles that might be interesting to the user, on social networks to recommend content and similar-minded users, or in restaurant and delivery apps to predict places that match the user's tastes, among many other situations.
 
