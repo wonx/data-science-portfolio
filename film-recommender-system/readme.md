@@ -31,7 +31,7 @@ Table of contents
 
 	- [persona.py](classes/persona.py): this module contains the `Persona` class, responsible for the creation of the `persona` objects that store all the user data, like the username, ratings, and the classification table. It also includes methods that return this information in an orderly manner.
 
-	- [distancia.py](classes.distancia.py): composed by the abstract class `Distancia(ABC):`, with the subclasses `DistanciaEuclidiana(Distancia)` and `DistanciaPearson(Distancia)`, which are in charge of calculating the distance between users with the two respective algorithms. Moreover, it contains the `newrange()` methods to addapt the score ranges.
+	- [distancia.py](classes/distancia.py): composed by the abstract class `Distancia(ABC):`, with the subclasses `DistanciaEuclidiana(Distancia)` and `DistanciaPearson(Distancia)`, which are in charge of calculating the distance between users with the two respective algorithms. Moreover, it contains the `newrange()` methods to addapt the score ranges.
 
 	- [filmstats.py](classes/filmstats.py): module that contains a set of functions to extract statistical data related to the movies. For instance, `filmmeans(person)` provides the mean ratings for each film; `mostseen()` shows the most popular movies; `notseen(person)` display those moves that have not been watched by a specific user; and `soulmates(persona)` returns those users with whom the reference user shows closer tastes.
 
